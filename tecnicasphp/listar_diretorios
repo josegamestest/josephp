@@ -1,0 +1,10 @@
+<?php 
+if ($handle = opendir('../')) { //diretorio a ser listado
+    while (false !== ($entry = readdir($handle))) {
+        if ($entry != "." && $entry != "..") {
+            echo "$entry\n..</br>";
+     }
+ }
+   closedir($handle);
+}
+?>
