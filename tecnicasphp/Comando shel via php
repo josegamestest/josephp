@@ -1,0 +1,4 @@
+<?php
+  $saida = shell_exec('ifconfig'); //pega o comando no shel
+  echo "<pre>$saida</pre>";  //mostra na tela o resultado
+?>
