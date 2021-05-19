@@ -1,0 +1,3 @@
+<?php
+echo phpinfo(); //gera uma pagina com informacoes da vercao do php
+?>
