@@ -1,0 +1,12 @@
+<?php
+// Display all sqlite tables
+    $db = new SQLite3('../../../home/josea/DB/jose.SQLITE3'); //link da tabela
+    $tablesquery = $db->query("SELECT name FROM sqlite_master WHERE type='table';");
+
+    while ($table = $tablesquery->fetchArray(SQLITE3_ASSOC)) {
+        if ($table['name'] != "sqlite_sequence") {
+            echo $table['name'] . ' <br />';
+        }
+    }
+?>
+
